@@ -1,0 +1,19 @@
+<mat-toolbar class="mat-elevation-z6 navbar" color="primary">
+  <div fxHide.gt-sm fxLayoutAlign="start center">
+    <button class="menu-button" mat-icon-button (click)="sidenav.toggle()" aria-label="Menu">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span class="title">{{title}}</span>
+  </div>
+  <div fxHide.lt-md>
+    <button mat-button routerLink="/" routerLinkActive="active">
+      <img class="logo" src="assets/bbeg-logo-sm.png" alt="BBEG logo" /><span>&nbsp;<strong>BBEG</strong></span>
+    </button>
+    <button mat-button routerLink="/about" routerLinkActive="active">
+      <mat-icon>info</mat-icon>
+      <span translate>About</span>
+    </button>
+  </div>
+  <span fxFlex></span>
+  <app-language-selector [icon]="true"></app-language-selector>
+</mat-toolbar>

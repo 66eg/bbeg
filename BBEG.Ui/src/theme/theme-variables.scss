@@ -1,0 +1,10 @@
+// See https://material.angular.io/guide/theming for more details.
+// Also https://medium.com/@tomastrajan/the-complete-guide-to-angular-material-themes-4d165a9d24d1
+@import "~@angular/material/theming";
+$md-bbeg-main: ( 50 : #f3e8f0, 100 : #e2c6d9, 200 : #cfa1c0, 300 : #bb7ba7, 400 : #ad5e94, 500 : #9e4281, 600 : #963c79, 700 : #8c336e, 800 : #822b64, 900 : #701d51, A100 : #ffadde, A200 : #ff7aca, A400 : #ff47b6, A700 : #ff2eab, contrast: ( 50 : #000000, 100 : #000000, 200 : #000000, 300 : #000000, 400 : #ffffff, 500 : #ffffff, 600 : #ffffff, 700 : #ffffff, 800 : #ffffff, 900 : #ffffff, A100 : #000000, A200 : #000000, A400 : #000000, A700 : #ffffff, ) );
+$md-bbeg-highlight: ( 50 : #f9eefc, 100 : #f0d4f8, 200 : #e6b8f3, 300 : #db9bee, 400 : #d485ea, 500 : #cc70e6, 600 : #c768e3, 700 : #c05ddf, 800 : #b953db, 900 : #ad41d5, A100 : #ffffff, A200 : #fcf3ff, A400 : #edc0ff, A700 : #e6a7ff, contrast: ( 50 : #000000, 100 : #000000, 200 : #000000, 300 : #000000, 400 : #000000, 500 : #000000, 600 : #000000, 700 : #000000, 800 : #000000, 900 : #ffffff, A100 : #000000, A200 : #000000, A400 : #000000, A700 : #000000, ) );
+$app-primary: mat-palette($md-bbeg-main);
+$app-accent:  mat-palette($md-bbeg-highlight, A200, A100, A400);
+$app-warn:    mat-palette($mat-red);
+$app-theme: mat-light-theme($app-primary, $app-accent, $app-warn);
+$material-design-icons-font-directory-path: "~material-design-icons-iconfont/dist/fonts/";
