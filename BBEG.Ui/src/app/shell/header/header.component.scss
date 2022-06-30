@@ -1,13 +1,19 @@
-@import "src/theme/theme-variables";
-
 .navbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+
+.mat-toolbar {
+    border-bottom: 5px solid #000;
+}
+
+.mat-button-social {
+    padding: 0 5px;
 }
 
 .menu-button {
-  margin-right: 1rem;
+    margin-right: 1rem;
 }
