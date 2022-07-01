@@ -1,0 +1,81 @@
+@import "src/theme/theme-variables";
+
+:host {
+    display: flex;
+    flex: 1;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+#copyright {
+    text-align: center;
+    width: 100%;
+}
+
+.wrapper {
+    min-height: 100%;
+    margin-bottom: -50px;
+}
+
+.footer,
+.push {
+    height: 50px;
+}
+
+.footer {
+    background-color: #170033;
+    border-top: 5px solid #CC70E6;
+    box-shadow: 0 -4px 5px -1px #0003, 0 6px 10px #00000024, 0 1px 18px #0000001f;
+    color: #fff;
+    font-family: Roboto,Helvetica Neue,sans-serif;
+    font-size: 14px;
+}
+
+.mat-sidenav {
+    min-width: 270px;
+    max-width: 28%;
+}
+
+.has-border {
+    border-right: 1px solid rgb(0 0 0 / 12%);
+}
+
+.mat-list {
+    padding-top: 0;
+}
+
+.mat-list-item {
+    text-decoration: none;
+
+    &:hover {
+        background: rgb(0 0 0 / 5%);
+    }
+}
+
+.mat-drawer-container {
+    position: unset;
+}
+
+.mat-sidenav,
+.mat-drawer-content,
+// Force style down to child components
+// See https://angular.io/guide/component-styles#deep
+:host ::ng-deep .mat-drawer-backdrop {
+    top: 64px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: auto;
+    position: absolute;
+}
+
+@media ($mat-xsmall) {
+    .mat-sidenav,
+    .mat-drawer-content,
+    :host ::ng-deep .mat-drawer-backdrop {
+        top: 56px;
+    }
+}
