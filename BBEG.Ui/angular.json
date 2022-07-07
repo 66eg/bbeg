@@ -23,7 +23,7 @@
                         "customWebpackConfig": {
                             "path": "./custom-webpack.config.ts"
                         },
-                        "outputPath": "dist",
+                        "outputPath": "dist/bbeg/browser",
                         "index": "src/index.html",
                         "main": "src/main.ts",
                         "polyfills": "src/polyfills.ts",
@@ -69,7 +69,7 @@
                                 }
                             ],
                             "outputHashing": "all",
-                            "sourceMap": true
+                            "sourceMap": false
                         },
                         "development": {
                             "buildOptimizer": false,
@@ -160,6 +160,73 @@
                         "firebaseProject": "bbeg-3ba1c",
                         "firebaseHostingSite": "bbeg-3ba1c"
                     }
+                },
+                "server": {
+                  "builder": "@angular-devkit/build-angular:server",
+                  "options": {
+                    "outputPath": "dist/bbeg/server",
+                    "main": "server.ts",
+                    "tsConfig": "tsconfig.server.json",
+                    "stylePreprocessorOptions": {
+                      "includePaths": [
+                        "src",
+                        "src/theme"
+                      ]
+                    },
+                    "inlineStyleLanguage": "scss"
+                  },
+                  "configurations": {
+                    "production": {
+                      "outputHashing": "media",
+                      "fileReplacements": [
+                        {
+                          "replace": "src/environments/environment.ts",
+                          "with": "src/environments/environment.prod.ts"
+                        }
+                      ],
+                      "sourceMap": false
+                    },
+                    "development": {
+                      "optimization": false,
+                      "sourceMap": true,
+                      "extractLicenses": false
+                    },
+                    "ci": {}
+                  },
+                  "defaultConfiguration": "production"
+                },
+                "serve-ssr": {
+                  "builder": "@nguniversal/builders:ssr-dev-server",
+                  "configurations": {
+                    "development": {
+                      "browserTarget": "bbeg:build:development",
+                      "serverTarget": "bbeg:server:development"
+                    },
+                    "production": {
+                      "browserTarget": "bbeg:build:production",
+                      "serverTarget": "bbeg:server:production"
+                    }
+                  },
+                  "defaultConfiguration": "development"
+                },
+                "prerender": {
+                  "builder": "@nguniversal/builders:prerender",
+                  "options": {
+                    "routes": [
+                      "/"
+                    ]
+                  },
+                  "configurations": {
+                    "production": {
+                      "browserTarget": "bbeg:build:production",
+                      "serverTarget": "bbeg:server:production"
+                    },
+                    "development": {
+                      "browserTarget": "bbeg:build:development",
+                      "serverTarget": "bbeg:server:development"
+                    }
+                  },
+                  "defaultConfiguration": "production"
                 }
             }
         }

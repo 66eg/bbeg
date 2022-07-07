@@ -3,7 +3,18 @@
     <ProjectGuid>68393d90-29d5-4257-a56f-6ac1393270d3</ProjectGuid>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupCommand>npm start</StartupCommand>
-    <JavaScriptTestFramework>Jasmine</JavaScriptTestFramework>
+    <StartupCommand>npm run serve:sw</StartupCommand>
   </PropertyGroup>
+  <Target Name="PreflightCheckNode" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(AngularRoot)node_modules') ">
+    <Exec Command="node --version" ContinueOnError="true">
+      <Output TaskParameter="ExitCode" PropertyName="ErrorCode" />
+    </Exec>
+    <Error Condition="'$(ErrorCode)' != '0'" Text="Node.js is required to build and run this project. To continue, please install Node.js from https://nodejs.org/, and then restart your command prompt or IDE." />
+  </Target>
+  <Target Name="PreflightCheckAngular" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(AngularRoot)node_modules') ">
+    <Exec Command="ng --version" ContinueOnError="true">
+      <Output TaskParameter="ExitCode" PropertyName="ErrorCode" />
+    </Exec>
+    <Error Condition="'$(ErrorCode)' != '0'" Text="Angular is required to build and run this project. To continue, please install Angular from https://angular.io/, and then restart your command prompt or IDE." />
+  </Target>
 </Project>

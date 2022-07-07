@@ -1,31 +1,37 @@
 <mat-toolbar class="mat-elevation-z6 navbar" color="primary">
     <div fxHide.gt-sm fxLayoutAlign="start center">
-        <button class="menu-button" mat-icon-button (click)="sidenav.toggle()" aria-label="Menu">
+        <button class="menu-button" mat-icon-button (click)="sidenav.toggle()" aria-label="Toggle Menu">
             <mat-icon>menu</mat-icon>
         </button>
         <span class="title">{{title}}</span>
     </div>
     <div fxHide.lt-md>
-        <button mat-button routerLink="/" routerLinkActive="active">
+        <button mat-button routerLink="/" routerLinkActive="active" title="BBEG Home" aria-label="Navigate to BBEG Home page.">
             <img class="logo" height="36" width="36" src="assets/bbeg-logo-sm.png" alt="BBEG logo" /><span>&nbsp;<strong>BBEG</strong></span>
         </button>
-        <button mat-button routerLink="/about" routerLinkActive="active">
+        <button mat-button routerLink="/about" routerLinkActive="active" title="About BBEG" aria-label="Navigate to BBEG About page.">
             <mat-icon>info</mat-icon>
             <span translate>About</span>
         </button>
     </div>
     <span fxFlex></span>
-    <button mat-icon-button class="mat-button-social" (click)="openSocial('https://www.facebook.com/BBEGOfficial/')">
-        <img class="soccial" height="24" width="24" src="assets/facebook.png" alt="Facebook link" />
+    <button mat-icon-button class="mat-button-social" (click)="openSocial('https://discord.gg/vGBDqrTm')" title="Go to the BBEG Discord server." aria-label="Go to the BBEG Discord server.">
+        <fa-icon [icon]="faDiscord" class="social"></fa-icon>
     </button>
-    <button mat-icon-button class="mat-button-social" (click)="openSocial('https://www.linkedin.com/company/bbeg/')">
-        <img class="social" height="24" width="24" src="assets/linkedin.png" alt="LinkedIn link" />
+    <button mat-icon-button class="mat-button-social" (click)="openSocial('https://www.facebook.com/BBEGOfficial/')" title="Go to the BBEG Facebook page." aria-label="Go to the BBEG Facebook page.">
+        <fa-icon [icon]="faFacebook" class="social"></fa-icon>
     </button>
-    <button mat-icon-button class="mat-button-social" (click)="openSocial('https://www.twitch.tv/bbegofficial')">
-        <img class="social" height="24" width="24" src="assets/twitch.png" alt="Twitch link" />
+    <button mat-icon-button class="mat-button-social" (click)="openSocial('https://github.com/66eg')" title="Go to the BBEG GitHub." aria-label="Go to the BBEG GitHub.">
+        <fa-icon [icon]="faGitHub" class="social"></fa-icon>
     </button>
-    <button mat-icon-button class="mat-button-social" (click)="openSocial('https://twitter.com/BBEG_Official')">
-        <img class="social" height="24" width="24" src="assets/twitter.png" alt="Twitter link" />
+    <button mat-icon-button class="mat-button-social" (click)="openSocial('https://www.linkedin.com/company/bbeg/')" title="Go to the BBEG LinkedIn page." aria-label="Go to the BBEG LinkedIn page.">
+        <fa-icon [icon]="faLinkedIn" class="social"></fa-icon>
+    </button>
+    <button mat-icon-button class="mat-button-social" (click)="openSocial('https://www.twitch.tv/bbegofficial')" title="Go to the BBEG Twitch page." aria-label="Go to the BBEG Twitch page.">
+        <fa-icon [icon]="faTwitch" class="social"></fa-icon>
+    </button>
+    <button mat-icon-button class="mat-button-social" (click)="openSocial('https://twitter.com/BBEG_Official')" title="Go to the BBEG Twitter page." aria-label="Go to the BBEG Twitter page.">
+        <fa-icon [icon]="faTwitter" class="social"></fa-icon>
     </button>
     <app-language-selector [icon]="true"></app-language-selector>
 </mat-toolbar>
