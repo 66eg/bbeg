@@ -59,10 +59,10 @@ Task                            | Description
 `npm run test:ci`               | Lint code and run unit tests once for continuous integration
 `npm run lint`                  | Lint code
 `npm run translations:extract`  | Extract strings from code and templates to `src/app/translations/template.json`
-'dev:ssr'                       | Run the application with Angular Universal, also known as server-side rendering (SSR)
-'serve:ssr'                     | Run the application in SSR production mode. This script runs the compiled server source code, which resides in the dist//server folder.
-'build:ssr'                     | This command should be used to compile the production-ready SSR application (in dist//browser and dist//server)
-'prerender'                     | Generate HTML and JavaScript for static hosting
+`dev:ssr`                       | Run the application with Angular Universal, also known as server-side rendering (SSR)
+`serve:ssr`                     | Run the application in SSR production mode. This script runs the compiled server source code, which resides in the dist//server folder.
+`build:ssr`                     | This command should be used to compile the production-ready SSR application (in dist//browser and dist//server)
+`prerender`                     | Generate HTML and JavaScript for static hosting
 
 When building the application, you can specify the target configuration using the additional flag
 `--configuration <name>` (do not forget to prepend `--` to pass arguments to npm scripts).
