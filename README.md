@@ -1,27 +1,24 @@
-# BBEG.Ui
+# BBEG 
+The corporate website repository for BBEG, a tech startup dedicated to software research &amp; development for tabletop gaming.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.3.
+# Getting Started
+1.	Environment & Tooling
+    - Install [Visual Studio 2022](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=Community&channel=Release&version=VS2022&source=VSLandingPage&cid=2030&passive=false).
+        - If already install, update Visual Studio -> Help -> Check for Updates.
+    - Intall [Git](https://git-scm.com/downloads).
+        - If already installed, update [Git](https://phoenixnap.com/kb/how-to-update-git).
+    - Install [NPM](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm).
+        - If already installed, update [NPM](https://docs.npmjs.com/try-the-latest-stable-version-of-npm).
+    - Install [Angular CLI](https://angular.io/guide/setup-local).
+        - If already installed, update [Angular CLI](https://stackoverflow.com/a/43931987).
+    - Install [SQL Server Developer Edition](https://www.microsoft.com/en-us/sql-server/sql-server-downloads).
+        - [Additional documentation](https://www.sqlservertutorial.net/install-sql-server/).
+    - Install [SQL Server Management Studio](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms).
+2.	Build & Run
+    - In Visual Studio, select the Dev environment and click play.
+        - This should build the Angular app, publish the database locally, and instantiate the API.
+3.	Run Tests
+    - TODO
 
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+# Branching and Pipelines.
+TODO: 

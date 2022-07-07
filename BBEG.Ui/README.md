@@ -1,16 +1,21 @@
 # bbeg
+This is the user-interface (UI) for the company website for [BBEG](https://bigbadevilguy.com).
 
-This project was generated with [ngX-Rocket](https://github.com/ngx-rocket/generator-ngx-rocket/)
+The project was generated with [ngX-Rocket](https://github.com/ngx-rocket/generator-ngx-rocket/)
 version 10.1.2
 
 # Getting started
 
-1. Go to project folder and install dependencies:
+1. Install Node.js from https://nodejs.org/.
+
+2. Install Angular from https://angular.io/.
+
+3. Go to project folder and install dependencies via command or terminal:
  ```sh
  npm install
  ```
 
-2. Launch development server, and open `localhost:4200` in your browser:
+2. Launch development server, and open `localhost:4200` in your browser by using Start in Visual Studio (or optionally start just the Ui project via command line):
  ```sh
  npm start
  ```
@@ -54,6 +59,10 @@ Task                            | Description
 `npm run test:ci`               | Lint code and run unit tests once for continuous integration
 `npm run lint`                  | Lint code
 `npm run translations:extract`  | Extract strings from code and templates to `src/app/translations/template.json`
+'dev:ssr'                       | Run the application with Angular Universal, also known as server-side rendering (SSR)
+'serve:ssr'                     | Run the application in SSR production mode. This script runs the compiled server source code, which resides in the dist//server folder.
+'build:ssr'                     | This command should be used to compile the production-ready SSR application (in dist//browser and dist//server)
+'prerender'                     | Generate HTML and JavaScript for static hosting
 
 When building the application, you can specify the target configuration using the additional flag
 `--configuration <name>` (do not forget to prepend `--` to pass arguments to npm scripts).
@@ -98,7 +107,7 @@ Development, build and quality processes are based on [angular-cli](https://gith
 - Static code analysis: [TSLint](https://github.com/palantir/tslint), [Codelyzer](https://github.com/mgechev/codelyzer),
   [Stylelint](http://stylelint.io) and [HTMLHint](http://htmlhint.com/)
 
-#### Libraries
+#### Libraries &amp; Resources
 
 - [Angular](https://angular.io)
 - [Angular Material](https://material.angular.io)
@@ -106,6 +115,8 @@ Development, build and quality processes are based on [angular-cli](https://gith
 - [Material Icons](https://material.io/icons/)
 - [RxJS](http://reactivex.io/rxjs)
 - [ngx-translate](https://github.com/ngx-translate/core)
+- [Angular FontAwesome](https://github.com/FortAwesome/angular-fontawesome)
+- [Magic: the Gathering Developers](https://magicthegathering.io)
 
 #### Coding guides
 
