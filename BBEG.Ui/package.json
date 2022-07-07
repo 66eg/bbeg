@@ -7,7 +7,7 @@
     "build": "npm run write:env -s && ng build",
     "start": "npm run write:env -s && ng serve --proxy-config proxy.conf.js",
     "deploy": "npm run write:env -s && ng deploy",
-    "serve:sw": "npm run build -s && npx http-server -b -c 31536000 -S -C localhost.pem ./dist -p 4200",
+    "serve:sw": "npm run build -s && npx http-server -b -c 31536000 -S -C localhost.pem ./dist/bbeg/browser -p 4200",
     "lint": "ng lint && stylelint \"src/**/*.scss\"",
     "test": "npm run write:env -s && ng test",
     "test:ci": "npm run write:env -s && npm run lint -s && ng test --configuration=ci",
