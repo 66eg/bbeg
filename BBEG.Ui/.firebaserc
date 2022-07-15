@@ -1,14 +1,14 @@
 {
-  "targets": {
-    "bbeg-3ba1c": {
-      "hosting": {
-        "bbeg": [
-          "bbeg-3ba1c"
-        ]
-      }
+    "targets": {
+        "bbeg-3ba1c": {
+            "hosting": {
+                "bbeg": [
+                    "bbeg-3ba1c"
+                ]
+            }
+        }
+    },
+    "projects": {
+        "default": "bbeg-3ba1c"
     }
-  },
-  "projects": {
-    "default": "bbeg-3ba1c"
-  }
 }

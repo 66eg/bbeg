@@ -24,5 +24,4 @@ import { HeaderComponent } from './header/header.component';
         ShellComponent
     ]
 })
-export class ShellModule {
-}
+export class ShellModule { }

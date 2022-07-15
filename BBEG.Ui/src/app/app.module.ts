@@ -31,7 +31,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
         ShellModule,
         HomeModule,
         AppRoutingModule,
-        FontAwesomeModule // must be imported as the last module as it contains the fallback route
+        FontAwesomeModule // Must be imported as the last module as it contains the fallback route.
     ],
     declarations: [AppComponent],
     providers: [
