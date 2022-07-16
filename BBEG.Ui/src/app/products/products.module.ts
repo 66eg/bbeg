@@ -3,21 +3,21 @@ import { CommonModule } from '@angular/common';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { TranslateModule } from '@ngx-translate/core';
 import { MaterialModule } from '@app/material.module';
-import { SharedModule } from '@shared';
-import { AboutRoutingModule } from './about-routing.module';
-import { AboutComponent } from './about.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { ProductsRoutingModule } from './products-routing.module';
+import { ProductsComponent } from './products.component';
 
 @NgModule({
     imports: [
         CommonModule,
-        TranslateModule,
         FlexLayoutModule,
-        SharedModule,
         MaterialModule,
-        AboutRoutingModule
+        TranslateModule,
+        FontAwesomeModule,
+        ProductsRoutingModule
     ],
     declarations: [
-        AboutComponent
+        ProductsComponent,
     ]
 })
-export class AboutModule { }
+export class ProductsModule { }

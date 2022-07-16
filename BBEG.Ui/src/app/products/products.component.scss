@@ -1,0 +1,52 @@
+.container {
+    margin-bottom: 50px;
+    padding: 1rem;
+}
+
+.container > mat-card {
+    height: 390px;
+    width: 200px;
+}
+
+.description {
+    padding-top: 10px;
+    text-align: center;
+}
+
+.mat-button-social {
+    padding: 0 5px;
+}
+
+::ng-deep .mat-card-header-text {
+    margin: 0;
+    width: 100%;
+}
+
+.mat-card-image {
+    margin: 0;
+}
+
+.title {
+    text-align: center;
+}
+
+.app-icons {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.app-logo {
+    display: block;
+    height: 180px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 180px;
+}
+
+.app-social {
+    font-size: 2em;
+    line-height: 0.1em;
+    vertical-align: -0.3em;
+}

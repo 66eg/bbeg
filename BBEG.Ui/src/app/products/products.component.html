@@ -1,0 +1,30 @@
+<div class="container">
+    <div fxLayout="row wrap" fxLayoutGap="16px grid">
+        <div fxFlex="25%" fxFlex.xs="100%" fxFlex.sm="33%" *ngFor="let app of apps">
+            <mat-card class="mat-elevation-z4">
+                <mat-card-header class="app-header">
+                    <mat-card-title class="title">{{app.name}}</mat-card-title>
+                </mat-card-header>
+                <img mat-card-image class="app-logo" height="180" width="180" src="{{app.logo}}" alt="{{app.name}} logo">
+                <mat-card-content>
+                    <p class="description">
+                        {{app.descriptionShort}}
+                    </p>
+                </mat-card-content>
+                <mat-card-actions>
+                    <div class="app-icons">
+                        <button mat-icon-button class="mat-button-social" ng-hide="app.website=='tbd'" (click)="openSocial(app.website)" title="Go to the {{app.name}} website." attr.aria-label="Go to the {{app.name}} website.">
+                            <fa-icon [icon]="faGlobe" class="app-social"></fa-icon>
+                        </button>
+                        <button mat-icon-button class="mat-button-social" ng-hide="app.facebook=='tbd'" (click)="openSocial(app.facebook)" title="Go to the {{app.name}} Facebook page." attr.aria-label="Go to the {{app.name}} Facebook page.">
+                            <fa-icon [icon]="faFacebook" class="app-social"></fa-icon>
+                        </button>
+                        <button mat-icon-button class="mat-button-social" ng-hide="app.twitter=='tbd'" (click)="openSocial(app.twitter)" title="Go to the {{app.name}}G Twitter page." attr.aria-label="Go to the {{app.name}} Twitter page.">
+                            <fa-icon [icon]="faTwitter" class="app-social"></fa-icon>
+                        </button>
+                    </div>
+                </mat-card-actions>
+            </mat-card>
+        </div>
+    </div>
+</div>
