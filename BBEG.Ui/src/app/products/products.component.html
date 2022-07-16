@@ -13,13 +13,13 @@
                 </mat-card-content>
                 <mat-card-actions>
                     <div class="app-icons">
-                        <button mat-icon-button class="mat-button-social" ng-hide="app.website=='tbd'" (click)="openSocial(app.website)" title="Go to the {{app.name}} website." attr.aria-label="Go to the {{app.name}} website.">
+                        <button mat-icon-button class="mat-button-social" *ngIf="app.website!='tbd'" (click)="openSocial(app.website)" title="Go to the {{app.name}} website." attr.aria-label="Go to the {{app.name}} website.">
                             <fa-icon [icon]="faGlobe" class="app-social"></fa-icon>
                         </button>
-                        <button mat-icon-button class="mat-button-social" ng-hide="app.facebook=='tbd'" (click)="openSocial(app.facebook)" title="Go to the {{app.name}} Facebook page." attr.aria-label="Go to the {{app.name}} Facebook page.">
+                        <button mat-icon-button class="mat-button-social" *ngIf="app.facebook!='tbd'" (click)="openSocial(app.facebook)" title="Go to the {{app.name}} Facebook page." attr.aria-label="Go to the {{app.name}} Facebook page.">
                             <fa-icon [icon]="faFacebook" class="app-social"></fa-icon>
                         </button>
-                        <button mat-icon-button class="mat-button-social" ng-hide="app.twitter=='tbd'" (click)="openSocial(app.twitter)" title="Go to the {{app.name}}G Twitter page." attr.aria-label="Go to the {{app.name}} Twitter page.">
+                        <button mat-icon-button class="mat-button-social" *ngIf="app.twitter!='tbd'" (click)="openSocial(app.twitter)" title="Go to the {{app.name}}G Twitter page." attr.aria-label="Go to the {{app.name}} Twitter page.">
                             <fa-icon [icon]="faTwitter" class="app-social"></fa-icon>
                         </button>
                     </div>
