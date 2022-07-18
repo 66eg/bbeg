@@ -1,23 +1,23 @@
 {
-  "name": "BBEG",
-  "short_name": "bbeg",
-  "theme_color": "#9E4281",
-  "background_color": "#170033",
-  "display": "standalone",
-  "scope": "./",
-  "start_url": "./",
-  "icons": [
-    {
-      "src": "assets/bbeg-logo.png",
-      "sizes": "512x512",
-      "type": "image/png",
-      "purpose": "maskable any"
-    },
-    {
-      "src": "assets/bbeg-logo@192.png",
-      "sizes": "192x192",
-      "type": "image/png",
-      "purpose": "maskable any"
-    }
-  ]
+    "name": "BBEG",
+    "short_name": "bbeg",
+    "theme_color": "#9E4281",
+    "background_color": "#170033",
+    "display": "standalone",
+    "scope": "./",
+    "start_url": "./",
+    "icons": [
+        {
+            "src": "assets/bbeg-logo.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "maskable any"
+        },
+        {
+            "src": "assets/bbeg-logo@192.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "maskable any"
+        }
+    ]
 }

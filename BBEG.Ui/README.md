@@ -7,15 +7,24 @@ version 10.1.2
 # Getting started
 
 1. Install Node.js from https://nodejs.org/.
-
 2. Install Angular from https://angular.io/.
-
-3. Go to project folder and install dependencies via command or terminal:
+3. Add certificate for https with localhost (Windows):
+    1. Press the Windows key + R.
+    2. Type “MMC” and click “OK”.
+    3. Go to “File > Add/Remove Snap-in”.
+    4. Click “Certificates” and “Add”.
+    5. Select “Computer Account” and click “Next”.
+    6. Select “Local Computer” then click “Finish”.
+    7. Click “OK” to go back to the MMC window
+    8. Double-click “Certificates (local computer)” to expand the view.
+    9. Select “Trusted Root Certification Authorities”, right-click “Certificates” and select “All Tasks” then “Import”.
+    10. Click “Next” then Browse and locate the “key.pem” file in the root of BBEG.Ui.
+    11. Select “Place all certificates in the following store” and select the “Trusted Root Certification Authorities store”. Click “Next” then click “Finish” to complete the wizard.
+4. Go to project folder and install dependencies via command or terminal:
  ```sh
  npm install
  ```
-
-2. Launch development server, and open `localhost:4200` in your browser by using Start in Visual Studio (or optionally start just the Ui project via command line):
+5. Launch development server, and open `localhost:4200` in your browser by using Start in Visual Studio (or optionally start just the Ui project via command line):
  ```sh
  npm start
  ```
@@ -59,10 +68,11 @@ Task                            | Description
 `npm run test:ci`               | Lint code and run unit tests once for continuous integration
 `npm run lint`                  | Lint code
 `npm run translations:extract`  | Extract strings from code and templates to `src/app/translations/template.json`
-'dev:ssr'                       | Run the application with Angular Universal, also known as server-side rendering (SSR)
-'serve:ssr'                     | Run the application in SSR production mode. This script runs the compiled server source code, which resides in the dist//server folder.
-'build:ssr'                     | This command should be used to compile the production-ready SSR application (in dist//browser and dist//server)
-'prerender'                     | Generate HTML and JavaScript for static hosting
+`dev:ssr`                       | Run the application with Angular Universal, also known as server-side rendering (SSR)
+`serve:ssr`                     | Run the application in SSR production mode. This script runs the compiled server source code, which resides in the dist//server folder.
+`build:ssr`                     | This command should be used to compile the production-ready SSR application (in dist//browser and dist//server)
+`prerender`                     | Generate HTML and JavaScript for static hosting
+`npm deploy`                    | Deploy to Firebase hosting.
 
 When building the application, you can specify the target configuration using the additional flag
 `--configuration <name>` (do not forget to prepend `--` to pass arguments to npm scripts).

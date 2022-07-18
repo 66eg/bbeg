@@ -32,6 +32,8 @@ html, body {
     color: #fff;
     font-family: Roboto,Helvetica Neue,sans-serif;
     font-size: 14px;
+    position: relative;
+    z-index: 1000;
 }
 
 .mat-sidenav {
@@ -61,7 +63,7 @@ html, body {
 
 .mat-sidenav,
 .mat-drawer-content,
-// Force style down to child components
+// Force style down to child components.
 // See https://angular.io/guide/component-styles#deep
 :host ::ng-deep .mat-drawer-backdrop {
     top: 64px;
