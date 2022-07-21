@@ -12,6 +12,7 @@ import { environment } from '@env/environment';
 import { RouteReusableStrategy, ApiPrefixInterceptor, ErrorHandlerInterceptor, SharedModule } from '@shared';
 import { HomeModule } from './home/home.module';
 import { ShellModule } from './shell/shell.module';
+import { MetadataService } from './shell/metadata.service';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
@@ -35,6 +36,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     ],
     declarations: [AppComponent],
     providers: [
+        MetadataService,
         {
             provide: HTTP_INTERCEPTORS,
             useClass: ApiPrefixInterceptor,

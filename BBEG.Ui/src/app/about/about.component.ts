@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { finalize } from 'rxjs/operators';
 import { environment } from '@env/environment';
+import { MetadataService } from '../shell/metadata.service';
 import { QuoteService } from './quote.service';
 
 @Component({
@@ -13,9 +14,15 @@ export class AboutComponent implements OnInit {
     quote: any = [];
     version: string | null = environment.version;
 
-    constructor(private quoteService: QuoteService) { }
+    constructor(private metadataService: MetadataService,
+                private quoteService: QuoteService) { }
 
     ngOnInit() {
+        this.metadataService.updateMetadata({
+            title: 'About | BBEG',
+            description: 'BBEG company values, vision, and mission statement.',
+            keywords: ['values', 'vision', 'mission'],
+        });
         this.isLoading = true;
         this.quoteService.getRandomQuote()
             .pipe(finalize(() => { this.isLoading = false; }))
