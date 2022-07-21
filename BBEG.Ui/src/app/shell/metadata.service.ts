@@ -67,6 +67,7 @@ export class MetadataService {
             { name: 'robots', content: index ? 'index, follow' : 'noindex' },
             { 'http-equiv': 'Content-Type', content: 'text/html; charset=utf-8' }
         ]);
+        this.titleService.setTitle(pageMetadata.title);
     }
 
     private generateMetaDefinitions(metadata: PageMetadata): MetaDefinition[] {
