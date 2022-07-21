@@ -62,6 +62,10 @@ export class ProductsComponent implements OnInit {
             title: 'Products | BBEG',
             description: 'BBEG is actively developing software and content for tabletop gamers.',
             keywords: ['Gaming Keep', 'Venture Captain', 'Six Shooter AGS', 'software'],
+            image: 'gamingKeep.png',
+            imageAlt: 'Gaming Keep Logo',
+            imageHeight: '250',
+            imageWidth: '250'
         });
     }
 
