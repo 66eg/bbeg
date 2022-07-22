@@ -3,6 +3,7 @@ import { Breakpoints, BreakpointObserver } from '@angular/cdk/layout';
 import { MatSidenav } from '@angular/material/sidenav';
 import { filter } from 'rxjs/operators';
 import { UntilDestroy, untilDestroyed } from '@shared';
+import { faDiscord, faFacebook, faGithub, faLinkedin, faTwitch, faTwitter } from '@fortawesome/free-brands-svg-icons';
 
 @UntilDestroy()
 @Component({
@@ -12,7 +13,12 @@ import { UntilDestroy, untilDestroyed } from '@shared';
 })
 export class ShellComponent implements OnInit {
     @ViewChild('sidenav', { static: false }) sidenav!: MatSidenav;
-    year: number = new Date().getFullYear();
+    faDiscord = faDiscord;
+    faFacebook = faFacebook;
+    faGitHub = faGithub;
+    faLinkedIn = faLinkedin;
+    faTwitch = faTwitch;
+    faTwitter = faTwitter;
 
     constructor(private breakpoint: BreakpointObserver) { }
 
@@ -27,5 +33,9 @@ export class ShellComponent implements OnInit {
             .subscribe(() => {
                 if (this.sidenav) this.sidenav.close();
             });
+    }
+
+    openSocial(url: string) {
+        window.open(url, '_blank');
     }
 }
