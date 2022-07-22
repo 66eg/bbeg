@@ -10,9 +10,19 @@ html, body {
     margin: 0;
 }
 
-#copyright {
-    text-align: center;
-    width: 100%;
+.social-icons{
+    display:inline-block;
+    margin:auto;
+}
+
+.social {
+    font-size: 1.5em;
+    line-height: 0.05em;
+    vertical-align: -0.3em;
+}
+
+.mat-button-social {
+    padding: 0 5px;
 }
 
 .wrapper {
