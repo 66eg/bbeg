@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { faGlobe } from '@fortawesome/free-solid-svg-icons';
 import { faFacebook, faTwitter } from '@fortawesome/free-brands-svg-icons';
+import { MetadataService } from '../shell/metadata.service';
 
 @Component({
     selector: 'app-products',
@@ -54,12 +55,18 @@ export class ProductsComponent implements OnInit {
         }
     ];
 
-    constructor() {
-        // Intentionally left empty.
-    }
+    constructor(private metadataService: MetadataService) { }
 
     ngOnInit(): void {
-        // Intentionally left empty.
+        this.metadataService.updateMetadata({
+            title: 'Products | BBEG',
+            description: 'BBEG is actively developing software and content for tabletop gamers.',
+            keywords: ['Gaming Keep', 'Venture Captain', 'Six Shooter AGS', 'software'],
+            image: 'gamingKeep.png',
+            imageAlt: 'Gaming Keep Logo',
+            imageHeight: '250',
+            imageWidth: '250'
+        });
     }
 
     openSocial(url: string) {

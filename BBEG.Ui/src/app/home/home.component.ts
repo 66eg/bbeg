@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MetadataService } from '../shell/metadata.service';
 
 @Component({
     selector: 'app-home',
@@ -6,10 +7,11 @@ import { Component, OnInit } from '@angular/core';
     styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-    constructor() {
+    constructor(private metadataService: MetadataService) {
         // Intentionally left empty.
     }
+
     ngOnInit() {
-        // Intentionally left empty.
+        this.metadataService.updateMetadata({ title: 'Home | BBEG' });
     }
 }
