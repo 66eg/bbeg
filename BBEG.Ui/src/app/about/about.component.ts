@@ -8,8 +8,6 @@ import { MetadataService } from '../shell/metadata.service';
     styleUrls: ['./about.component.scss']
 })
 export class AboutComponent implements OnInit {
-    isLoading = false;
-    quote: any = [];
     version: string | null = environment.version;
 
     constructor(private metadataService: MetadataService) { }
