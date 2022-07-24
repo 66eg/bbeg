@@ -4,8 +4,9 @@ import { ngExpressEngine } from '@nguniversal/express-engine';
 import * as express from 'express';
 import { existsSync } from 'fs';
 import { join } from 'path';
-import 'localstorage-polyfill';
 import { AppServerModule } from './src/main.server';
+import { HOST_URL } from './src/app/host-url';
+import 'localstorage-polyfill';
 global['localStorage'] = localStorage;
 
 // The Express app is exported so that it can be used by serverless Functions.
@@ -30,7 +31,16 @@ export function app(): express.Express {
 
     // All regular routes use the Universal engine.
     server.get('*', (req, res) => {
-        res.render(indexHtml, { req, providers: [{ provide: APP_BASE_HREF, useValue: req.baseUrl }] });
+        // URL where the app is hosted; will be useful for generating meta tags (e.g. https://app-domain.com/).
+        const hostUrl = req.protocol + '://' + req.get('Host');
+
+        res.render(indexHtml, {
+            req, providers: [
+                { provide: APP_BASE_HREF, useValue: req.baseUrl },
+                // Inject hostUrl to become available in Angular DI system on the server.
+                { provide: HOST_URL, useValue: hostUrl }
+            ]
+        });
     });
     return server;
 }

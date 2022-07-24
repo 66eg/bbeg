@@ -2,8 +2,8 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { Breakpoints, BreakpointObserver } from '@angular/cdk/layout';
 import { MatSidenav } from '@angular/material/sidenav';
 import { filter } from 'rxjs/operators';
-import { UntilDestroy, untilDestroyed } from '@shared';
 import { faDiscord, faFacebook, faGithub, faLinkedin, faTwitch, faTwitter } from '@fortawesome/free-brands-svg-icons';
+import { UntilDestroy, untilDestroyed } from '@shared';
 
 @UntilDestroy()
 @Component({

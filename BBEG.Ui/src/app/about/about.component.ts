@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { environment } from '@env/environment';
+import { MetadataService } from '../shell/metadata.service';
 
 @Component({
     selector: 'app-about',
@@ -11,11 +12,13 @@ export class AboutComponent implements OnInit {
     quote: any = [];
     version: string | null = environment.version;
 
-    constructor() {
-        // Intentionally left empty.
-    }
+    constructor(private metadataService: MetadataService) { }
 
     ngOnInit() {
-        // Intentionally left empty.
+        this.metadataService.updateMetadata({
+            title: 'About | BBEG',
+            description: 'BBEG company values, vision, and mission statement.',
+            keywords: ['values', 'vision', 'mission'],
+        });
     }
 }
