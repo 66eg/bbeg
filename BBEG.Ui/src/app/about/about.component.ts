@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { environment } from '@env/environment';
+import { RpgAwesomeIconsRegistry } from '@triangular/rpg-awesome-icons';
+import { rpgAwesomeIconAnvil, rpgAwesomeIconBleedingEye, rpgAwesomeIconCrystals } from '@triangular/rpg-awesome-icons/icons';
 import { MetadataService } from '../shell/metadata.service';
 
 @Component({
@@ -10,7 +12,14 @@ import { MetadataService } from '../shell/metadata.service';
 export class AboutComponent implements OnInit {
     version: string | null = environment.version;
 
-    constructor(private metadataService: MetadataService) { }
+    constructor(private metadataService: MetadataService,
+        private registry: RpgAwesomeIconsRegistry) {
+        registry.registerIcons([
+            rpgAwesomeIconAnvil,
+            rpgAwesomeIconBleedingEye,
+            rpgAwesomeIconCrystals
+        ]);
+    }
 
     ngOnInit() {
         this.metadataService.updateMetadata({

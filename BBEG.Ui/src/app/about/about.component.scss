@@ -11,6 +11,13 @@
     vertical-align: middle;
 }
 
+::ng-deep svg {
+    height: auto;
+    margin-bottom: -1%;
+    min-width: 20px;
+    width: 5%;
+} 
+
 .spacer {
     margin-top:30px;
 }
