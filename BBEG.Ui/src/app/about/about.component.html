@@ -1,7 +1,9 @@
 <div class="container">
     <mat-card>
         <mat-card-content>
-            <h2 translate>BBEG's Mission</h2>
+            <h2>
+                <mat-card-title translate>BBEG's Mission</mat-card-title>
+            </h2>
             <mat-card-subtitle>
                 <p translate>Our quest is enabling gamers by providing them tools that improve the gaming experience and lowering the threshold to join and host games all whilst striving towards diversity and inclusion. </p>
             </mat-card-subtitle>
@@ -9,7 +11,9 @@
     </mat-card>
     <mat-card>
         <mat-card-content>
-            <h2 translate>BBEG's Vision</h2>
+            <h2>
+                <mat-card-title translate>BBEG's Vision</mat-card-title>
+            </h2>
             <mat-card-subtitle>
                 <p translate>Our divinations see a future where more gamers from more backgrounds are gaming more often.</p>
             </mat-card-subtitle>
@@ -17,9 +21,11 @@
     </mat-card>
     <mat-card>
         <mat-card-content>
-            <h2 translate>BBEG's Values</h2>
+            <h2>
+                <mat-card-title translate>BBEG's Values</mat-card-title>
+            </h2>
             <mat-card-subtitle>
-                <ul>
+                <ul class="values">
                     <li translate>Lead by example.</li>
                     <li translate>Embrace diversity.</li>
                     <li translate>Improve continuously.</li>
@@ -31,12 +37,13 @@
         </mat-card-content>
     </mat-card>
     <mat-card>
-        <h1>
+        <h2>
             <mat-card-title translate>BBEG Company Site</mat-card-title>
-        </h1>
+        </h2>
         <mat-card-content>
             <mat-icon>code</mat-icon>
             <span translate>Version</span> {{version}}
         </mat-card-content>
     </mat-card>
+    <div class="spacer">&nbsp;</div>
 </div>
