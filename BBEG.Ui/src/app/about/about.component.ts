@@ -25,7 +25,7 @@ export class AboutComponent implements OnInit {
         this.metadataService.updateMetadata({
             title: 'About | BBEG',
             description: 'BBEG company values, vision, and mission statement.',
-            keywords: ['values', 'vision', 'mission'],
+            keywords: ['values', 'vision', 'mission', 'diversity', 'gaming'],
         });
     }
 }
