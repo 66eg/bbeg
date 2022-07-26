@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { finalize } from 'rxjs/operators';
 import { environment } from '@env/environment';
+import { RpgAwesomeIconsRegistry } from '@triangular/rpg-awesome-icons';
+import { rpgAwesomeIconAnvil, rpgAwesomeIconBleedingEye, rpgAwesomeIconCrystals } from '@triangular/rpg-awesome-icons/icons';
 import { MetadataService } from '../shell/metadata.service';
-import { QuoteService } from './quote.service';
 
 @Component({
     selector: 'app-about',
@@ -10,24 +10,22 @@ import { QuoteService } from './quote.service';
     styleUrls: ['./about.component.scss']
 })
 export class AboutComponent implements OnInit {
-    isLoading = false;
-    quote: any = [];
     version: string | null = environment.version;
 
     constructor(private metadataService: MetadataService,
-                private quoteService: QuoteService) { }
+        private registry: RpgAwesomeIconsRegistry) {
+        registry.registerIcons([
+            rpgAwesomeIconAnvil,
+            rpgAwesomeIconBleedingEye,
+            rpgAwesomeIconCrystals
+        ]);
+    }
 
     ngOnInit() {
         this.metadataService.updateMetadata({
             title: 'About | BBEG',
             description: 'BBEG company values, vision, and mission statement.',
-            keywords: ['values', 'vision', 'mission'],
+            keywords: ['values', 'vision', 'mission', 'diversity', 'gaming'],
         });
-        this.isLoading = true;
-        this.quoteService.getRandomQuote()
-            .pipe(finalize(() => { this.isLoading = false; }))
-            .subscribe((quote: any) => {
-                this.quote = quote.cards[0];
-            });
     }
 }

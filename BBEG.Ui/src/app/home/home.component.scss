@@ -9,11 +9,14 @@
     margin: 0 auto;
 }
 
-.magicCard {
-    margin: 0 auto;
+.main {
+    padding-bottom: 40px;
 }
 
-q {
-    font-style: italic;
-    quotes: "« " " »";
+@media only screen and (max-width: 450px) {
+    .logo {
+        height: 90%;
+        width: 90%;
+        margin: 0 auto;
+    }
 }
