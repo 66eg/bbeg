@@ -6,10 +6,12 @@ import { Shell } from '@app/shell/shell.service';
 const routes: Routes = [
     Shell.childRoutes([
         { path: 'about', loadChildren: () => import('./about/about.module').then(m => m.AboutModule) },
-        { path: 'products', loadChildren: () => import('./products/products.module').then(m => m.ProductsModule) }
+        { path: 'about/team', loadChildren: () => import('./about/about.module').then(m => m.AboutModule) },
+        { path: 'products', loadChildren: () => import('./products/products.module').then(m => m.ProductsModule) },
+        { path: 'notFound', loadChildren: () => import('./not-found/not-found.module').then(m => m.NotFoundModule) }
     ]),
     // Fallback when no prior route is matched.
-    { path: '**', redirectTo: '', pathMatch: 'full' }
+    { path: '**', redirectTo: 'notFound', pathMatch: 'full' }
 ];
 
 @NgModule({
