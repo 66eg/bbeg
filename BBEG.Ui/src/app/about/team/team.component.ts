@@ -9,20 +9,20 @@ import { MetadataService } from '../../shell/metadata.service';
 })
 export class TeamComponent implements OnInit {
     faLinkedIn = faLinkedin;
-    founder: Member = {
-        id: 1,
-        duties: 'Leadership & Inspiration; Funding; Software Engineering & Implementation',
-        games: 'Mutants & Masterminds, Marvel Champions, Gotham City Chronicles',
-        image: 'assets/brewer.png',
-        linkedIn: 'https://www.linkedin.com/in/michaeltheengineer/',
-        name: 'Michael Brewer',
-        title: 'Founder'
-    }
     employees: Member[] = [
+        {
+            id: 1,
+            duties: 'Leadership & Inspiration; Funding; Software Engineering & Implementation',
+            games: 'Mutants & Masterminds, Marvel Champions, Gotham City Chronicles',
+            image: 'assets/brewer.png',
+            linkedIn: 'https://www.linkedin.com/in/michaeltheengineer/',
+            name: 'Michael Brewer',
+            title: 'Founder'
+        },
         {
             id: 2,
             duties: 'Architectural Design; Systems Design; Engineering Best Practices & Controls',
-            games: '',
+            games: 'Pathfinder, Eclipse Phase, Shadows of Brimstone',
             image: 'assets/boles.png',
             linkedIn: 'https://www.linkedin.com/in/jesse-boles-45279a6a/',
             name: 'Jesse Boles',
@@ -68,7 +68,6 @@ export class TeamComponent implements OnInit {
             keywords: ['team', 'software engineer', 'security', 'human resources'],
         });
         this.members = this.shuffle(this.employees);
-        this.members.push(this.founder);
     }
 
     openSocial(url: string) {
@@ -84,7 +83,7 @@ export class TeamComponent implements OnInit {
         }
 
         return arr;
-    };
+    }
 }
 
 export interface Member {
