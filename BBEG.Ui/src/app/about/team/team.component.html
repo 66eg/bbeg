@@ -5,22 +5,22 @@
                 <mat-card-header class="app-header">
                     <mat-card-title class="name">{{member.name}}</mat-card-title>
                 </mat-card-header>
-                <img mat-card-image class="app-logo" height="180" width="180" src="{{member.image}}" alt="{{member.name}} picture">
+                <img mat-card-image class="app-logo" height="180" width="180" src="{{member.image}}" alt="{{member.name}} {{'picture' | translate}}">
                 <mat-card-content>
                     <h3 class="title">{{member.title}}</h3>
-                    <h4>Duties</h4>
+                    <h4 translate>Duties</h4>
                     <p class="duties">
                         {{member.duties}}
                     </p>
                     <hr />
-                    <h4>Favorite Games</h4>
+                    <h4 translate>Favorite Games</h4>
                     <p class="games">
                         {{member.games}}
                     </p>
                 </mat-card-content>
                 <mat-card-actions>
                     <div class="app-icons">
-                        <button mat-icon-button class="mat-button-social" *ngIf="member.linkedIn!='tbd'" (click)="openSocial(member.linkedIn)" title="Go to the {{member.name}}'s LinkedIn profile." attr.aria-label="Go to the {{member.name}}'s LinkedIn profile.">
+                        <button mat-icon-button class="mat-button-social" *ngIf="member.linkedIn!='tbd'" (click)="openSocial(member.linkedIn)" title="{{'Go to the LinkedIn profile for' | translate}} {{member.name}}." attr.aria-label="{{'Go to the LinkedIn profile for' | translate}} {{member.name}}.">
                             <fa-icon [icon]="faLinkedIn" class="app-social"></fa-icon>
                         </button>
                     </div>

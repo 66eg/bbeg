@@ -1,21 +1,21 @@
 <mat-toolbar class="mat-elevation-z6 navbar" color="primary">
     <div fxHide.gt-sm fxLayoutAlign="start center">
-        <button class="menu-button" mat-icon-button (click)="sidenav.toggle()" aria-label="Toggle Menu">
+        <button class="menu-button" mat-icon-button (click)="sidenav.toggle()" attr.aria-label="{{'Toggle Menu' | translate}}">
             <mat-icon>menu</mat-icon>
         </button>
         <span class="title">{{title | slice:0:-7}}</span>
     </div>
     <div fxHide.lt-md>
-        <button mat-button routerLink="/" routerLinkActive="active" title="BBEG Home" aria-label="Navigate to BBEG Home page.">
+        <button mat-button routerLink="/" routerLinkActive="active" title="{{'BBEG Home' | translate}}" attr.aria-label="{{'Navigate to BBEG Home page.' | translate}}">
             <img class="logo" height="36" width="36" src="assets/bbeg-logo-sm.png" alt="BBEG logo" /><span>&nbsp;<strong>BBEG</strong></span>
         </button>
-        <button mat-button routerLink="/about" routerLinkActive="active" title="About BBEG" aria-label="Navigate to BBEG About page.">
+        <button mat-button routerLink="/about" routerLinkActive="active" title="{{'About BBEG' | translate}}" attr.aria-label="{{'Navigate to BBEG About page.' | translate}}">
             <span translate>About</span>
         </button>
-        <button mat-button routerLink="/about/team" routerLinkActive="active" title="BBEG Team Members" aria-label="Navigate to BBEG Team page.">
+        <button mat-button routerLink="/about/team" routerLinkActive="active" title="{{'BBEG Team Members' | translate}}" attr.aria-label="{{'Navigate to BBEG Team page.' | translate}}">
             <span translate>Team</span>
         </button>
-        <button mat-button routerLink="/products" routerLinkActive="active" title="BBEG Products" aria-label="Navigate to BBEG Products page.">
+        <button mat-button routerLink="/products" routerLinkActive="active" title="{{'BBEG Products' | translate}}" attr.aria-label="{{'Navigate to BBEG Products page.' | translate}}">
             <span translate>Products</span>
         </button>
     </div>
