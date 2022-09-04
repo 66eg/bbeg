@@ -21,8 +21,8 @@
                 "sourceLocale": "en-US",
                 // All other locales our app supports
                 "locales": {
-                    "ar": {
-                        "translation": "src/locale/messages.ar.xlf"
+                    "de": {
+                        "translation": "src/translations/messages.de.xlf"
                     }
                 }
             },
