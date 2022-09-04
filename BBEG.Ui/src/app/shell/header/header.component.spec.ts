@@ -1,5 +1,4 @@
 import { waitForAsync, ComponentFixture, TestBed } from '@angular/core/testing';
-import { TranslateModule } from '@ngx-translate/core';
 import { RouterTestingModule } from '@angular/router/testing';
 import { MaterialModule } from '@app/material.module';
 import { I18nModule } from '@app/i18n';
@@ -14,7 +13,6 @@ describe('HeaderComponent', () => {
             imports: [
                 RouterTestingModule,
                 MaterialModule,
-                TranslateModule.forRoot(),
                 I18nModule
             ],
             declarations: [HeaderComponent],

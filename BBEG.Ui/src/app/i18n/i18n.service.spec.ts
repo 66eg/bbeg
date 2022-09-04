@@ -1,5 +1,4 @@
 import { TestBed } from '@angular/core/testing';
-import { TranslateService, LangChangeEvent } from '@ngx-translate/core';
 import { Subject } from 'rxjs';
 import { I18nService } from './i18n.service';
 
@@ -27,27 +26,19 @@ class MockTranslateService {
 
 describe('I18nService', () => {
     let i18nService: I18nService;
-    let translateService: TranslateService;
     let onLangChangeSpy: jasmine.Spy;
 
     beforeEach(() => {
         TestBed.configureTestingModule({
             providers: [
-                I18nService,
-                { provide: TranslateService, useClass: MockTranslateService },
+                I18nService
             ]
         });
 
         i18nService = TestBed.inject(I18nService);
-        translateService = TestBed.inject(TranslateService);
 
         // Create spies.
         onLangChangeSpy = jasmine.createSpy('onLangChangeSpy');
-        translateService.onLangChange
-            .subscribe((event: LangChangeEvent) => {
-                onLangChangeSpy(event.lang);
-            });
-        spyOn(translateService, 'use').and.callThrough();
     });
 
     afterEach(() => {
@@ -61,7 +52,6 @@ describe('I18nService', () => {
             i18nService.init(defaultLanguage, supportedLanguages);
 
             // Assert.
-            expect(translateService.use).toHaveBeenCalledWith(defaultLanguage);
             expect(onLangChangeSpy).toHaveBeenCalledWith(defaultLanguage);
         });
 
@@ -74,7 +64,6 @@ describe('I18nService', () => {
             i18nService.init(defaultLanguage, supportedLanguages);
 
             // Assert.
-            expect(translateService.use).toHaveBeenCalledWith(savedLanguage);
             expect(onLangChangeSpy).toHaveBeenCalledWith(savedLanguage);
         });
     });
@@ -89,7 +78,6 @@ describe('I18nService', () => {
             i18nService.language = newLanguage;
 
             // Assert.
-            expect(translateService.use).toHaveBeenCalledWith(newLanguage);
             expect(onLangChangeSpy).toHaveBeenCalledWith(newLanguage);
         });
 
@@ -102,7 +90,6 @@ describe('I18nService', () => {
             i18nService.language = newLanguage;
 
             // Assert.
-            expect(translateService.use).toHaveBeenCalledWith('fr-FR');
             expect(onLangChangeSpy).toHaveBeenCalledWith('fr-FR');
         });
 
@@ -115,7 +102,6 @@ describe('I18nService', () => {
             i18nService.language = newLanguage;
 
             // Assert.
-            expect(translateService.use).toHaveBeenCalledWith(defaultLanguage);
             expect(onLangChangeSpy).toHaveBeenCalledWith(defaultLanguage);
         });
     });

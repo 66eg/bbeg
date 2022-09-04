@@ -16,6 +16,16 @@
             "root": "",
             "sourceRoot": "src",
             "prefix": "app",
+            "i18n": {
+                // The locale we use in development, defaults to en-US
+                "sourceLocale": "en-US",
+                // All other locales our app supports
+                "locales": {
+                    "ar": {
+                        "translation": "src/locale/messages.ar.xlf"
+                    }
+                }
+            },
             "architect": {
                 "build": {
                     "builder": "@angular-builders/custom-webpack:browser",
@@ -69,7 +79,7 @@
                                 }
                             ],
                             "outputHashing": "all",
-                            "sourceMap": false
+                            "sourceMap": true
                         },
                         "development": {
                             "buildOptimizer": false,
@@ -99,12 +109,6 @@
                         }
                     },
                     "defaultConfiguration": "development"
-                },
-                "extract-i18n": {
-                    "builder": "@angular-devkit/build-angular:extract-i18n",
-                    "options": {
-                        "browserTarget": "bbeg:build"
-                    }
                 },
                 "test": {
                     "builder": "@angular-devkit/build-angular:karma",

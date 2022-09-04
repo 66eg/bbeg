@@ -1,5 +1,4 @@
 import { waitForAsync, ComponentFixture, TestBed } from '@angular/core/testing';
-import { TranslateModule } from '@ngx-translate/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MaterialModule } from '@app/material.module';
@@ -15,8 +14,7 @@ describe('LanguageSelectorComponent', () => {
             imports: [
                 BrowserAnimationsModule,
                 FlexLayoutModule,
-                MaterialModule,
-                TranslateModule.forRoot()
+                MaterialModule
             ],
             declarations: [LanguageSelectorComponent],
             providers: [I18nService]

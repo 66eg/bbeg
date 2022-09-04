@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FlexLayoutModule } from '@angular/flex-layout';
-import { TranslateModule } from '@ngx-translate/core';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { RpgAwesomeIconsModule } from '@triangular/rpg-awesome-icons';
 import { MaterialModule } from '@app/material.module';
@@ -13,7 +12,6 @@ import { TeamComponent } from './team/team.component';
 @NgModule({
     imports: [
         CommonModule,
-        TranslateModule,
         FontAwesomeModule,
         RpgAwesomeIconsModule,
         FlexLayoutModule,

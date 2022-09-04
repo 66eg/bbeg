@@ -6,7 +6,6 @@ import { RouteReuseStrategy, RouterModule } from '@angular/router';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { QuicklinkModule } from 'ngx-quicklink';
-import { TranslateModule } from '@ngx-translate/core';
 import { MaterialModule } from './material.module';
 import { environment } from '@env/environment';
 import { RouteReusableStrategy, ApiPrefixInterceptor, ErrorHandlerInterceptor, SharedModule } from '@shared';
@@ -26,7 +25,6 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
         HttpClientModule,
         RouterModule,
         QuicklinkModule,
-        TranslateModule.forRoot(),
         MaterialModule,
         SharedModule,
         ShellModule,

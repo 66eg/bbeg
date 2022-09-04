@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { TranslateModule } from '@ngx-translate/core';
 import { RouterModule } from '@angular/router';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
@@ -12,7 +11,6 @@ import { HeaderComponent } from './header/header.component';
 @NgModule({
     imports: [
         CommonModule,
-        TranslateModule,
         FlexLayoutModule,
         MaterialModule,
         FontAwesomeModule,
