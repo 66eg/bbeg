@@ -17,9 +17,7 @@
             "sourceRoot": "src",
             "prefix": "app",
             "i18n": {
-                // The locale we use in development, defaults to en-US
                 "sourceLocale": "en-US",
-                // All other locales our app supports
                 "locales": {
                     "de": {
                         "translation": "src/translations/messages.de.xlf"

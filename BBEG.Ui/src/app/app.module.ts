@@ -15,6 +15,7 @@ import { MetadataService } from './shell/metadata.service';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { TranslocoRootModule } from './transloco-root.module';
 
 @NgModule({
     imports: [
@@ -30,7 +31,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
         ShellModule,
         HomeModule,
         AppRoutingModule,
-        FontAwesomeModule // Must be imported as the last module as it contains the fallback route.
+        FontAwesomeModule,
+        TranslocoRootModule // Must be imported as the last module as it contains the fallback route.
     ],
     declarations: [AppComponent],
     providers: [

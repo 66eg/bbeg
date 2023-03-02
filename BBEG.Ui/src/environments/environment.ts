@@ -11,6 +11,7 @@
 import { env } from './.env';
 
 export const environment = {
+  baseUrl: 'http://localhost:4200',
   production: false,
   version: env['npm_package_version'] + '-dev',
   serverUrl: '/api',
